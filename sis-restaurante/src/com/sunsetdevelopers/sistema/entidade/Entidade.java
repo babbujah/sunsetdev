@@ -8,32 +8,23 @@ import java.util.List;
 import javax.persistence.Entity;
 
 @Entity
-public class Entidade implements Serializable {
+public abstract class Entidade implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private Long id;
-	private String docReceitaFederal;
-	private String nome;
-	private String email;
-	private String referencias;
-	private String descricao;
-	private Date dataCadastro;
-	private Date dataNascimento;
-	private TipoCliente tipoCliente;
-	private List<Endereco> enderecos = new ArrayList<>();
-	private List<Telefone> telefones = new ArrayList<>();
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
+	protected String docReceitaFederal;
+	protected String nome;
+	protected String email;
+	protected String referencias;
+	protected String descricao;
+	protected Date dataCadastro;
+	protected Date dataNascimento;
+	protected TipoCliente tipoCliente;
+	protected List<Endereco> enderecos = new ArrayList<>();
+	protected List<Telefone> telefones = new ArrayList<>();
 
 	public String getDocReceitaFederal() {
 		return docReceitaFederal;
@@ -114,30 +105,4 @@ public class Entidade implements Serializable {
 	public void setTelefones(List<Telefone> telefones) {
 		this.telefones = telefones;
 	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Entidade other = (Entidade) obj;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		return true;
-	}
-
 }
