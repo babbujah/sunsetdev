@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<!--========================  cabeçalho -->
+<p:layoutUnit class="conteudo" position="north" id="header">
+	<div class="ui-grid ui-grid-responsive">
+		<div class="ui-grid-row">
+			<!-- Lado Esquerdo -->
+			<div class="ui-grid-col-5">
+				<IMG class="logo" alt="Logo Astoria"
+					src="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png" />
+				<h1>Sistema de Loja Astoria</h1>
+
+			</div>
+			<!-- Lado Direito -->
+			<div class="ui-grid-col-7">
+
+				<h:form id="form">
+					<p:growl id="messages" />
+					<p:menubar>			
+						<p:menuitem value="Venda" url="./Venda.xhtml"/>
+						<p:menuitem value="Mesa" url="./Mesa.xhtml" />
+						<p:menuitem value="Comanda" url="./Comanda.xhtml" />
+						<p:menuitem value="Caixa" url="./Caixa.xhtml" />
+						<p:menuitem value="Menu" url="./menu.xhtml" />
+					</p:menubar>
+				</h:form>
+			</div>
+		</div>
+	</div>
+</p:layoutUnit>
+<!--========================Fim Cabeçalho -->
+</html>

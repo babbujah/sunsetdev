@@ -1,0 +1,31 @@
+/**/
+/**/
+.ui-grid-row{
+	padding:0px;
+	margin: 0px;
+}
+.contVendido{
+	padding: 0px 10px 5px 10px !important;
+
+}
+
+.x{
+	color: #0080ff;
+	margin-right: 10px;
+	margin-left: 2px;
+}
+/*Buttao*/
+.ui-button-text-only, .ui-button-text{
+	padding: 0px !important;
+}
+.btVenda{
+
+	height: 31px;
+	width: 45px;
+}
+#qtd{
+	width: 65px;
+}
+#txtQtd{
+	padding-left: 239px;
+}

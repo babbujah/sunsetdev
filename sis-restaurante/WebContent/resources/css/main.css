@@ -1,0 +1,94 @@
+body {
+	background-color: blue;
+	margin: 0px;
+	font-family: "arial", "verdana", "sans-serif";
+}
+
+/*=====================================Hearde*/
+/*Logo E nome*/
+h1, .logo {
+	margin: 5px 0px 0px 7px;
+	float: left;
+}
+
+.logo {
+	float: left;
+	height: 60px;
+	width: 60px;
+}
+
+h1 {
+	font-size: 40px;
+	margin-top: 15px;
+}
+
+/*==================== Menu */
+/*Funçao pra quando a tela for pequena ele ir pra baixao da logo*/
+.ui-helper-clearfix {
+	display: none;
+}
+
+/* Configuração dos Componete Interno do menu */
+.ui-menu {
+	float: right;
+	font-size: 35px !important;
+	padding: 10px 15px 10px 15px;
+	background: transparent
+		-webkit-gradient(linear, left top, left bottom, from(rgba(173, 254, 255,
+		0)), to(rgba(255, 255, 255, 0))) !important;
+}
+/*Cor do Texto do menu*/
+.ui-menu .ui-menuitem-text {
+	color: #fff;
+}
+
+/*-----------------Bordas Menu---*/
+/*Remover Bug de barra de rolagem do topo*/
+.ui-layout-unit .ui-layout-unit-content {
+	overflow: hidden !important;
+}
+
+/* Borda Do elemento Pai do Menu*/
+.ui-widget-content {
+	border: 1px solid rgba(168, 168, 168, 0);
+}
+
+/*ADD Borda*/
+/* Borda direita dos Intem do menu*/
+.menuLi {
+	border-right: 2px solid #ffff00 !important;
+}
+/* Borda esquerda dos Intem do menu--------------(Desativado)*/
+.ui-menubar .ui-menuitem-link {
+	border-left: 2px solid #ffff00 !important;
+}
+/*====================Fim Menu*/
+/*=====================================Fim Hearde*/
+
+/*=====================================Corpo*/
+/* Meio das Conteine*/
+.ui-layout-unit-content {
+	background-color: #000080;
+	color: #ff8000;
+}
+/* Borda Do Conteine */
+.conteudo {
+	background-color: #0000a0;
+}
+/*=====================================Fim Corpo*/
+
+
+/*===================================== Rodape*/
+/*----Sentralizando texto -*/
+.footer {
+	width: 100%;
+	font-size: 13px;
+	text-align: center;
+}
+
+/*=====================================Fim Rodape*/
+
+/*Mozilar deixa menu trasparente */
+.ui-menu, .ui-menu .ui-menu-child{
+	background: transparent;
+}

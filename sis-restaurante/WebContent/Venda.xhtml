@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Vendas</title>
+	<h:outputStylesheet library="css" name="main.css" />
+	<h:outputStylesheet library="css" name="venda.css" />
+	<h:outputStylesheet library="css" name="font-awesome.min.css" />
+</h:head>
+<h:body>
+
+	<p:layout fullPage="true">
+		<!--======================== ADD cabeçalho -->
+		<ui:include src="/WEB-INF/template/header.xhtml" />
+		<!--======================== Fim ADD cabeçalho -->
+
+
+		<!-- ==========================  Corpo -->
+		<!-- +++++++++++++Lado Esquerdo -->
+		<p:layoutUnit class="conteudo" position="center">
+			<p:layout>
+				<!-- +++ top -->
+				<p:layoutUnit class="conteudo" size="150" position="north"
+					header="Grupos de Produtos" resizable="true">asdasdas</p:layoutUnit>
+				<!-- +++ Bot -->
+				<p:layoutUnit class="conteudo" position="center" header="Produtos">asdas</p:layoutUnit>
+			</p:layout>
+		</p:layoutUnit>
+		<!-- +++++++++++++ Fim Esquerdo -->
+
+		<!-- +++++++++++++ Lado Direito -->
+		<p:layoutUnit class="conteudo" position="east" resizable="true"
+			size="600" header="Venda" collapsible="true">
+
+			<div class="ui-grid ui-grid-responsive contVendido">
+				<dir class="ui-grid-row">
+					<div class="ui-grid-col-12">
+						<h:outputText value="Código" />
+						<h:outputText id="txtQtd" value="Qtd" />
+					</div>
+				</dir>
+				<dir class="ui-grid-row">
+					<div class="ui-grid-col-11">
+
+						<p:keyboard id="codigo" value="" keypadOnly="true" />
+
+						<p:commandButton class="btVenda" value="..." />
+
+						<h:outputText class="x" value=" X" />
+
+						<p:keyboard id="qtd" value="" keypadOnly="true" />
+						<p:commandButton class="btVenda" value="+" />
+						<p:commandButton class="btVenda" value="-" />
+					</div>
+				</dir>
+
+
+				<h:outputText value="Right unit content." />
+
+
+				<p:dataTable class="Produto" var="produtos"
+					value="#{dtBasicView.cars}">
+					<font></font>
+					<p:column headerText="Codigo">
+						<font></font>
+						<h:outputText value="#{car.id}" />
+						<font></font>
+					</p:column>
+					<font></font>
+					<font></font>
+					<p:column headerText="Produto">
+						<font></font>
+						<h:outputText value="#{car.year}" />
+						<font></font>
+					</p:column>
+					<font></font>
+					<font></font>
+					<p:column headerText="Qtde">
+						<font></font>
+						<h:outputText value="#{car.brand}" />
+						<font></font>
+					</p:column>
+					<font></font>
+					<font></font>
+					<p:column headerText="Unitário">
+						<font></font>
+						<h:outputText value="#{car.color}" />
+						<font></font>
+					</p:column>
+					<font></font>
+					<font></font>
+					<p:column headerText="Total">
+						<font></font>
+						<h:outputText value="#{car.color}" />
+						<font></font>
+					</p:column>
+					<font></font>
+				</p:dataTable>
+				<font></font>
+			</div>
+		</p:layoutUnit>
+		<!-- +++++++++++++ Fim Esquerdo -->
+		<!-- ==========================FIM  Corpo -->
+
+		<!-- ========================== ADD  Rodape -->
+		<ui:include src="/WEB-INF/template/footer.xhtml" />
+		<!-- ==========================FIM ADD  Rodape -->
+	</p:layout>
+</h:body>
+</html>

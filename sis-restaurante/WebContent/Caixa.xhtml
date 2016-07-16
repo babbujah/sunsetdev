@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Astoria</title>
+	<h:outputStylesheet library="css" name="main.css" />
+</h:head>
+<h:body>
+
+	<p:layout fullPage="true">
+		<!--======================== ADD cabeçalho -->
+		<ui:include src="/WEB-INF/template/header.xhtml" />
+		<!--======================== Fim ADD cabeçalho -->
+
+
+		<!-- ==========================  Corpo -->
+		<!-- +++++++++++++Lado Esquerdo -->
+		<p:layoutUnit class="conteudo" position="center"
+			header="Grupos de Produtos">
+			Grupos de Produtos
+		</p:layoutUnit>
+		<!-- +++++++++++++ Fim Esquerdo -->
+
+		<!-- +++++++++++++ Lado Direito -->
+		<p:layoutUnit class="conteudo" position="east" resizable="true"
+			size="600" header="Venda" collapsible="true">
+			<h:outputText value="Right unit content." />
+		        COmpras
+		    </p:layoutUnit>
+		<!-- +++++++++++++ Fim Esquerdo -->
+		<!-- ==========================FIM  Corpo -->
+		
+		<!-- ========================== ADD  Rodape -->
+		<ui:include src="/WEB-INF/template/footer.xhtml" />
+		<!-- ==========================FIM ADD  Rodape -->
+	</p:layout>
+</h:body>
+</html>
