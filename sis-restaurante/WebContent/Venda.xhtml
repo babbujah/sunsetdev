@@ -12,6 +12,7 @@
 	<h:outputStylesheet library="css" name="main.css" />
 	<h:outputStylesheet library="css" name="venda.css" />
 	<h:outputStylesheet library="css" name="modal-menu.css" />
+	<h:outputStylesheet library="css" name="modal-cadastra-cliente.css" />
 </h:head>
 <h:body>
 
@@ -19,9 +20,14 @@
 		<div class="modal-menu">
 			<ui:include src="/WEB-INF/template/modal-menu.xhtml" />
 		</div>
+	</p:dialog>
+<p:dialog header="Cadastri de Usuário" widgetVar="bt-modal-cadastro" modal="true">
+		<div class="modal-menu">
+			<ui:include src="/WEB-INF/template/modal-cadastro-usuario.xhtml" />
+		</div>
 
 	</p:dialog>
-
+	
 
 	<p:layout fullPage="true">
 		<!--======================== ADD cabeçalho -->
@@ -38,7 +44,7 @@
 					header="Grupos de Produtos" resizable="true">
 					Grupos dos Produtos Vendido					
 					<br />
-					Teste VRS:0.0.78
+					Teste VRS:0.0.86
 					</p:layoutUnit>
 				<!-- +++ Bot -->
 				<p:layoutUnit class="conteudo" position="center" header="Produtos">asdas</p:layoutUnit>
