@@ -1,9 +1,7 @@
-body {
+body{
 	background-color: blue;
-	margin: 0px;
-	font-family: "arial", "verdana", "sans-serif";
+	margin: 0px	font-family: arial;
 }
-
 /*=====================================Hearde*/
 /*Logo E nome*/
 h1, .logo {

@@ -20,6 +20,9 @@
 			<!-- Lado Direito -->
 			<div class="ui-grid-col-7">
 
+
+
+
 				<h:form id="form">
 					<p:growl id="messages" />
 					<p:menubar>			
@@ -27,7 +30,7 @@
 						<p:menuitem value="Mesa" url="./Mesa.xhtml" />
 						<p:menuitem value="Comanda" url="./Comanda.xhtml" />
 						<p:menuitem value="Caixa" url="./Caixa.xhtml" />
-						<p:menuitem value="Menu" url="./menu.xhtml" />
+						<p:menuitem value="Menu" onclick="PF('dlg2').show();"/>
 					</p:menubar>
 				</h:form>
 			</div>

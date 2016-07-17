@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<!--========================  modal menu -->
+
+<div class="nav-containe_cadastro">
+<h:form>  
+    <p:growl id="messages" showDetail="false"/>
+     <p:menu class="nav">
+       <p:submenu class="header-modal-nav" label="Cadastros">
+            <p:menuitem value="Clientes"  update="messages" icon="ui-icon-disk" />
+            <p:menuitem value="Grupos"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+            <p:menuitem value="Produto"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+            <p:menuitem value="Usuario"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+            <p:menuitem value="Mesas"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+        </p:submenu>
+    </p:menu>
+</h:form>
+</div>
+<div class="nav-containe-relatorio">
+<h:form>  
+    <p:growl id="messages" showDetail="false"/>
+<p:menu class="nav">
+        <p:submenu class="header-modal-nav" label="Relatório Geral">
+            <p:menuitem value="Vendas"  update="messages" icon="ui-icon-disk" />
+            <p:menuitem value="Graficos"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+            <p:menuitem value="Relatorios"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+        </p:submenu>
+    </p:menu>
+  </h:form>
+ </div>
+ <div class="nav-containe-configuracao">
+  <h:form>  
+    <p:growl id="messages" showDetail="false"/>
+<p:menu class="nav">
+        <p:submenu class="header-modal-nav" label="Configurações">
+            <p:menuitem value="Estabelecimento"  update="messages" icon="ui-icon-disk" />
+            <p:menuitem value="Sistema"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+            <p:menuitem value="Comanda Eletronica"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>            
+            <p:menuitem value="Volta"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+        </p:submenu>
+    </p:menu>
+  </h:form>
+  </div>
+<!--========================Fim modal menu -->
+</html>
