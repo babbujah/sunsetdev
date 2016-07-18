@@ -28,6 +28,11 @@
   <servlet-name>Faces Servlet</servlet-name>
   <url-pattern>/faces/*</url-pattern>
  </servlet-mapping>
+ <listener>  
+       <listener-class>  
+        com.sun.faces.config.ConfigureListener  
+    </listener-class>  
+</listener>
  <welcome-file-list>
   <welcome-file>/index.jsp</welcome-file>
  </welcome-file-list>
