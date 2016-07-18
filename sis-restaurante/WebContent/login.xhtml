@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Astoria Sistem 1.1</title>
+	<h:outputStylesheet library="css/bootstrap" name="bootstrap-theme.min.css" />
+	<h:outputStylesheet library="css/bootstrap" name="bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="index.css" />
+</h:head>
+<h:body>
+<div class="container">    
+        
+    <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> 
+        
+        <div class="row">                
+            <div class="iconmelon">
+              <img src="http://2.bp.blogspot.com/-rx-myARaqx4/UEI0Rz7DepI/AAAAAAAAAZk/DbUd6FWlWLU/s1600/8397_render_PREMIER.png" alt="" />
+             
+            </div>
+        </div>
+        
+        <div class="panel panel-default" >
+            <div class="panel-heading">
+                <div class="panel-title text-center">Sunset Developer</div>
+            </div>     
+
+            <div class="panel-body" >
+
+                  <h:form name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="post">
+                   
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <h:inputText id="user" class="form-control"  />
+                                                           
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                       
+                        <h:inputSecret id="password" class="form-control" name="password" placeholder="Password"/>
+                    </div>                                                                  
+
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class="col-sm-12 controls">
+                            <button type="submit" href="#" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i> Log in</button>                          
+                        </div>
+                    </div>
+
+                </h:form>     
+
+            </div>                     
+        </div>  
+    </div>
+</div>
+
+
+</h:body>
+</html>
