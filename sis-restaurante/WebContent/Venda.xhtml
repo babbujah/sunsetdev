@@ -13,6 +13,7 @@
 	<h:outputStylesheet library="css" name="venda.css" />
 	<h:outputStylesheet library="css" name="modal-menu.css" />
 	<h:outputStylesheet library="css" name="modal-cadastra-cliente.css" />
+
 </h:head>
 <h:body>
 
@@ -21,13 +22,16 @@
 			<ui:include src="/WEB-INF/template/modal-menu.xhtml" />
 		</div>
 	</p:dialog>
-<p:dialog header="Cadastri de Usuário" widgetVar="bt-modal-cadastro" modal="true">
-		<div class="modal-menu">
+
+
+	<p:dialog header="Cadastri de Usuário" widgetVar="bt-modal-cadastro"
+		modal="true">
+		<div class="modal-cadastro-cliente">
 			<ui:include src="/WEB-INF/template/modal-cadastro-usuario.xhtml" />
 		</div>
 
 	</p:dialog>
-	
+
 
 	<p:layout fullPage="true">
 		<!--======================== ADD cabeçalho -->
@@ -40,14 +44,14 @@
 		<p:layoutUnit class="conteudo" position="center">
 			<p:layout>
 				<!-- +++ top -->
-				<p:layoutUnit class="conteudo" size="150" position="north"
+				<p:layoutUnit class="produtos" size="150" position="north"
 					header="Grupos de Produtos" resizable="true">
 					Grupos dos Produtos Vendido					
 					<br />
-					Teste VRS:0.0.86
+					Teste VRS:0.0.105
 					</p:layoutUnit>
 				<!-- +++ Bot -->
-				<p:layoutUnit class="conteudo" position="center" header="Produtos">asdas</p:layoutUnit>
+				<p:layoutUnit class="produtos" position="center" header="Produtos">asdas</p:layoutUnit>
 			</p:layout>
 		</p:layoutUnit>
 		<!-- +++++++++++++ Fim Esquerdo -->

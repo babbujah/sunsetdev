@@ -1,6 +1,7 @@
-body{
-	background-color: blue;
-	margin: 0px	font-family: arial;
+body {
+	background-color: #303f9f;
+	margin: 0px 0px 0px 5px !important;
+	font-family: arial;
 }
 /*=====================================Hearde*/
 /*Logo E nome*/
@@ -54,11 +55,11 @@ h1 {
 /*ADD Borda*/
 /* Borda direita dos Intem do menu*/
 .menuLi {
-	border-right: 2px solid #ffff00 !important;
+	border-right: 2px solid #3f51b5 !important;
 }
 /* Borda esquerda dos Intem do menu--------------(Desativado)*/
 .ui-menubar .ui-menuitem-link {
-	border-left: 2px solid #ffff00 !important;
+	border-left: 2px solid #3f51b5 !important;
 }
 /*====================Fim Menu*/
 /*=====================================Fim Hearde*/
@@ -66,15 +67,14 @@ h1 {
 /*=====================================Corpo*/
 /* Meio das Conteine*/
 .ui-layout-unit-content {
-	background-color: #000080;
-	color: #ff8000;
+	background-color: #303f9f;
+	color: #ff9800;
 }
 /* Borda Do Conteine */
 .conteudo {
-	background-color: #0000a0;
+	background-color: #3f51b5;
 }
 /*=====================================Fim Corpo*/
-
 
 /*===================================== Rodape*/
 /*----Sentralizando texto -*/
@@ -87,6 +87,22 @@ h1 {
 /*=====================================Fim Rodape*/
 
 /*Mozilar deixa menu trasparente */
-.ui-menu, .ui-menu .ui-menu-child{
+.ui-menu, .ui-menu .ui-menu-child {
 	background: transparent;
+}
+/*tirando barra*/
+#header {
+	border-width: 0px 0px 2px 0px !important;
+	padding: 0px !important;
+}
+
+.produtos{
+	border-width: 0px 0px 0px 0px !important;
+	background-color:#303f9f;
+	padding: 0px !important;
+}
+@media screen and (max-width: 770px){
+  	body{
+    background-color: red;
+  }
 }
