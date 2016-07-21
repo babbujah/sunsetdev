@@ -1,10 +1,20 @@
 package com.sunsetdevelopers.sistema.entidade.funcionario;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.sunsetdevelopers.sistema.entidade.Entidade;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
-public class Funcao extends Entidade implements Serializable {
+@Entity
+@Table(name = "funcao")
+public class Funcao implements Serializable {
 
 	/**
 	 * 
@@ -14,7 +24,10 @@ public class Funcao extends Entidade implements Serializable {
 	private Long id;
 	private String nomeFuncao;
 	private String descricao;
+	private List<Funcionario> funcionarios = new ArrayList<>();
 
+	@Id
+	@GeneratedValue
 	public Long getId() {
 		return id;
 	}
@@ -23,6 +36,7 @@ public class Funcao extends Entidade implements Serializable {
 		this.id = id;
 	}
 
+	@Column(name = "nome_funcao", nullable = false, length = 100)
 	public String getNomeFuncao() {
 		return nomeFuncao;
 	}
@@ -31,12 +45,22 @@ public class Funcao extends Entidade implements Serializable {
 		this.nomeFuncao = nomeFuncao;
 	}
 
+	@Column(length = 200)
 	public String getDescricao() {
 		return descricao;
 	}
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	@OneToMany(mappedBy = "funcao", cascade = CascadeType.ALL)
+	public List<Funcionario> getFuncionarios() {
+		return funcionarios;
+	}
+
+	public void setFuncionarios(List<Funcionario> funcionarios) {
+		this.funcionarios = funcionarios;
 	}
 
 	@Override

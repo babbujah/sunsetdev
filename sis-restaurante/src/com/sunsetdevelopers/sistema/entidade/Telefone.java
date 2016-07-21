@@ -2,6 +2,16 @@ package com.sunsetdevelopers.sistema.entidade;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "telefone")
 public class Telefone implements Serializable {
 
 	/**
@@ -14,6 +24,8 @@ public class Telefone implements Serializable {
 	private String descricao;
 	private Entidade entidade;
 
+	@Id
+	@GeneratedValue
 	public Long getId() {
 		return id;
 	}
@@ -22,6 +34,7 @@ public class Telefone implements Serializable {
 		this.id = id;
 	}
 
+	@Column(nullable = false, length = 12)
 	public String getTelefone() {
 		return telefone;
 	}
@@ -30,6 +43,7 @@ public class Telefone implements Serializable {
 		this.telefone = telefone;
 	}
 
+	@Column(length = 200)
 	public String getDescricao() {
 		return descricao;
 	}
@@ -38,6 +52,8 @@ public class Telefone implements Serializable {
 		this.descricao = descricao;
 	}
 
+	@ManyToOne
+	@JoinColumn(name = "cliente_id", nullable = false)
 	public Entidade getEntidade() {
 		return entidade;
 	}
