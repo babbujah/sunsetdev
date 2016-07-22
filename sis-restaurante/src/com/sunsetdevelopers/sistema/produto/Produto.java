@@ -2,6 +2,16 @@ package com.sunsetdevelopers.sistema.produto;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "produto")
 public class Produto implements Serializable {
 
 	/**
@@ -16,6 +26,8 @@ public class Produto implements Serializable {
 	private int quantidadeEstoque;
 	private Categoria categoria;
 
+	@Id
+	@GeneratedValue
 	public Long getId() {
 		return id;
 	}
@@ -24,6 +36,7 @@ public class Produto implements Serializable {
 		this.id = id;
 	}
 
+	@Column(nullable = false, length = 100)
 	public String getNomeProduto() {
 		return nomeProduto;
 	}
@@ -32,6 +45,8 @@ public class Produto implements Serializable {
 		this.nomeProduto = nomeProduto;
 	}
 
+	@Enumerated(EnumType.STRING)
+	@Column(name = "unidade_medida", nullable = false, length = 10)
 	public UnidadeMedida getUnidadeMedida() {
 		return unidadeMedida;
 	}
@@ -40,6 +55,7 @@ public class Produto implements Serializable {
 		this.unidadeMedida = unidadeMedida;
 	}
 
+	@Column(name = "preco_unit", nullable = false, precision = 10, scale = 2)
 	public Float getPrecoUnit() {
 		return precoUnit;
 	}
@@ -48,6 +64,7 @@ public class Produto implements Serializable {
 		this.precoUnit = precoUnit;
 	}
 
+	@Column(name = "quantidade_estoque", nullable = false, length = 3)
 	public int getQuantidadeEstoque() {
 		return quantidadeEstoque;
 	}
@@ -56,6 +73,8 @@ public class Produto implements Serializable {
 		this.quantidadeEstoque = quantidadeEstoque;
 	}
 
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = false, length = 12)
 	public Categoria getCategoria() {
 		return categoria;
 	}
