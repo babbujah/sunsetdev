@@ -16,5 +16,8 @@
   <mapping class="com.sunsetdevelopers.sistema.entidade.cliente.Cliente"/>
   <mapping class="com.sunsetdevelopers.sistema.entidade.funcionario.Funcionario"/>
   <mapping class="com.sunsetdevelopers.sistema.entidade.funcionario.Funcao"/>
+  <mapping class="com.sunsetdevelopers.sistema.produto.Produto"/>
+  <mapping class="com.sunsetdevelopers.sistema.venda.Pedido"/>
+  <mapping class="com.sunsetdevelopers.sistema.venda.ItemPedido"/>
  </session-factory>
 </hibernate-configuration>
