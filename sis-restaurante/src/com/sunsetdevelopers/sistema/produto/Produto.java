@@ -25,6 +25,17 @@ public class Produto implements Serializable {
 	private Float precoUnit;
 	private int quantidadeEstoque;
 	private Categoria categoria;
+	
+	public Produto(){}
+	
+	public Produto(String nomeProduto, UnidadeMedida unidadeMedida, Float precoUnit, int quantidadeEstoque,
+			Categoria categoria) {
+		this.nomeProduto = nomeProduto;
+		this.unidadeMedida = unidadeMedida;
+		this.precoUnit = precoUnit;
+		this.quantidadeEstoque = quantidadeEstoque;
+		this.categoria = categoria;
+	}
 
 	@Id
 	@GeneratedValue

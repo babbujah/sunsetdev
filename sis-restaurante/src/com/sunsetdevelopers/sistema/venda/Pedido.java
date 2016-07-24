@@ -22,7 +22,6 @@ import javax.persistence.TemporalType;
 
 import com.sunsetdevelopers.sistema.entidade.cliente.Cliente;
 import com.sunsetdevelopers.sistema.entidade.funcionario.Funcionario;
-import com.sunsetdevelopers.sistema.entidade.mesa.Mesa;
 
 @Entity
 @Table(name = "pedido")
@@ -34,7 +33,7 @@ public class Pedido implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Long id;
-	private Mesa mesa;
+	private String mesa;
 	private Date dataPedido;
 	private float valorFrete;
 	private float valorDesconto;
@@ -57,12 +56,11 @@ public class Pedido implements Serializable {
 		this.id = id;
 	}
 
-	//Verificar. Ainda não está mapeada
-	public Mesa getMesa() {
+	public String getMesa() {
 		return mesa;
 	}
 
-	public void setMesa(Mesa mesa) {
+	public void setMesa(String mesa) {
 		this.mesa = mesa;
 	}
 
@@ -89,7 +87,7 @@ public class Pedido implements Serializable {
 	public float getValorDesconto() {
 		return valorDesconto;
 	}
-	
+
 	public void setValorDesconto(float valorDesconto) {
 		this.valorDesconto = valorDesconto;
 	}

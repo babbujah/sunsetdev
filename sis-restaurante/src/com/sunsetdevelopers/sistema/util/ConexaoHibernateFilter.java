@@ -30,6 +30,7 @@ public class ConexaoHibernateFilter implements Filter {
 			this.sf.getCurrentSession().close();
 			
 		} catch (Throwable e) {
+			
 			try {
 				
 				if(this.sf.getCurrentSession().getTransaction().isActive()) {
@@ -39,6 +40,8 @@ public class ConexaoHibernateFilter implements Filter {
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
+			
+			throw new ServletException();
 		}
 		
 	}
