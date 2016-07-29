@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Cadastro de Cliente</title>
+	<h:outputStylesheet library="css" name="main.css" />
+	<h:outputStylesheet library="css" name="venda.css" />
+	<h:outputStylesheet library="css" name="modal-menu.css" />
+	<h:outputStylesheet library="css" name="modal-cadastra-cliente.css" />
+</h:head>
+<h:body>
+
+	<h:form id="edicao">
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Nome: " />
+			<h:inputText value="#{clienteBean.clienteSelecionado.nome}" />
+
+			<h:outputLabel value="Documento: " />
+			<h:inputText value="#{clienteBean.clienteSelecionado.docReceitaFederal}" />
+
+			<h:outputLabel value="Email: " />
+			<h:inputText value="#{clienteBean.clienteSelecionado.email}" />
+
+			<h:outputLabel value="Categoria do Cliente" />
+			<h:inputText value="#{clienteBean.clienteSelecionado.categoriaCliente}" />
+
+<!-- 
+		//Novo cliente
+		end = new Endereco();
+		tel = new Telefone();
+		
+		c1 = new Cliente();
+		c1.setNome("Sunset Developers");
+		c1.setDocReceitaFederal("03456987000125");
+		c1.setCategoriaCliente(CategoriaCliente.VIP);
+		c1.setDataCadastro(new Date());
+		c1.setDataNascimento(new Date());
+		c1.setEmail("sunsetdev@email.com");
+		//c1.setSexo(Sexo.MASCULINO);
+		c1.setSituacao(Situacao.ATIVO);
+		c1.setTipoCliente(TipoCliente.JURIDICO);
+		
+		end.setLogradouro("Rua São João das Marcas");
+		end.setNumero("156");
+		end.setCidade("Extremoz");
+		end.setCep("59265-123");
+		end.setUf("RN");
+		end.setEntidade(c1);
+		
+		tel.setTelefone("84932061247");
+		tel.setDescricao("Fixo");
+		tel.setEntidade(c1);
+		
+		enderecos.add(end);
+		telefones.add(tel);
+		
+		c1.setEnderecos(enderecos);
+		c1.setTelefones(telefones);
+		-->
+		</h:panelGrid>
+
+		<h:commandButton value="Salvar" action="#{clienteBean.salvar}" />
+
+	</h:form>
+
+</h:body>
+</html>
