@@ -22,6 +22,11 @@ public class Cliente extends Entidade implements Serializable {
 	private CategoriaCliente categoriaCliente;
 	private Sexo sexo;
 	private Situacao situacao;
+	
+	public Cliente() {
+		categoriaCliente = CategoriaCliente.COMUM;
+		situacao = Situacao.ATIVO;
+	}
 
 	@Enumerated(EnumType.STRING)
 	@Column(name = "categoria_cliente", nullable = false, length = 6)

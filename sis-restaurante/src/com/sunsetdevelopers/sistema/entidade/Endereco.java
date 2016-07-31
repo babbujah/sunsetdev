@@ -93,7 +93,7 @@ public class Endereco implements Serializable {
 	}
 
 	@ManyToOne
-	@JoinColumn(name = "cliente_id", nullable = false)
+	@JoinColumn(name = "cliente_id")
 	public Entidade getEntidade() {
 		return entidade;
 	}

@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.sunsetdevelopers.sistema.entidade.Entidade;
+import com.sunsetdevelopers.sistema.entidade.TipoCliente;
 
 @Entity
 @Table(name = "funcionario")
@@ -22,6 +23,10 @@ public class Funcionario extends Entidade implements Serializable {
 	private String nomeUsuario;
 	private String senhaUsuario;
 	private Funcao funcao;
+	
+	public Funcionario() {
+		tipoCliente = TipoCliente.FISICO;
+	}
 
 	@Column(name = "nome_usuario", nullable = false, length = 50)
 	public String getNomeUsuario() {

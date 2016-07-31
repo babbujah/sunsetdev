@@ -39,7 +39,7 @@ public abstract class Entidade implements Serializable {
 	protected TipoCliente tipoCliente;
 	protected List<Endereco> enderecos = new ArrayList<>();
 	protected List<Telefone> telefones = new ArrayList<>();
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
 	public Long getId() {
@@ -68,7 +68,7 @@ public abstract class Entidade implements Serializable {
 		this.nome = nome;
 	}
 
-	@Column(nullable = false, length = 100)
+	@Column(length = 100)
 	public String getEmail() {
 		return email;
 	}
@@ -82,7 +82,6 @@ public abstract class Entidade implements Serializable {
 		return referencias;
 	}
 
-	
 	public void setReferencias(String referencias) {
 		this.referencias = referencias;
 	}
@@ -107,7 +106,7 @@ public abstract class Entidade implements Serializable {
 	}
 
 	@Temporal(TemporalType.DATE)
-	@Column(name = "data_nascimento", nullable = false)
+	@Column(name = "data_nascimento")
 	public Date getDataNascimento() {
 		return dataNascimento;
 	}
