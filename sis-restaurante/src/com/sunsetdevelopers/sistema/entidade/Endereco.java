@@ -22,6 +22,7 @@ public class Endereco implements Serializable {
 	private Long id;
 	private String logradouro;
 	private String numero;
+	private String bairro;
 	private String complemento;
 	private String cidade;
 	private String uf;
@@ -54,6 +55,15 @@ public class Endereco implements Serializable {
 
 	public void setNumero(String numero) {
 		this.numero = numero;
+	}
+
+	@Column(nullable = false, length = 50)
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
 	}
 
 	@Column(length = 150)

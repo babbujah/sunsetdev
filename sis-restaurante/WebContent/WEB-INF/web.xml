@@ -11,6 +11,9 @@
   <filter-name>conexaoFilter</filter-name>
   <url-pattern>*.jsf</url-pattern>
  </filter-mapping>
+ <listener>
+  <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
+ </listener>
  <servlet>
   <servlet-name>Faces Servlet</servlet-name>
   <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
@@ -28,12 +31,12 @@
   <servlet-name>Faces Servlet</servlet-name>
   <url-pattern>/faces/*</url-pattern>
  </servlet-mapping>
- <listener>  
-       <listener-class>  
-        com.sun.faces.config.ConfigureListener  
-    </listener-class>  
-</listener>
  <welcome-file-list>
   <welcome-file>/index.jsp</welcome-file>
  </welcome-file-list>
+ <jsp-config>
+  <jsp-property-group>
+   <url-pattern>/teste/*</url-pattern>
+  </jsp-property-group>
+ </jsp-config>
 </web-app>

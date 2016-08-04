@@ -40,6 +40,10 @@ public abstract class Entidade implements Serializable {
 	protected List<Endereco> enderecos = new ArrayList<>();
 	protected List<Telefone> telefones = new ArrayList<>();
 
+	public Entidade() {
+		dataCadastro = new Date();
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE)
 	public Long getId() {

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Cadastro de Cliente</title>
+	<h:outputStylesheet library="css" name="main.css" />
+	<h:outputStylesheet library="css" name="venda.css" />
+	<h:outputStylesheet library="css" name="modal-menu.css" />
+	<h:outputStylesheet library="css" name="modal-cadastra-cliente.css" />
+</h:head>
+<h:body>
+
+	<h:form id="editEndereco">
+		<h:messages />
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Logradouro: " />
+			<h:inputText value="#{enderecoBean.enderecoSelecionado.logradouro}" />
+
+			<h:outputLabel value="Número: " />
+			<h:inputText value="#{enderecoBean.enderecoSelecionado.numero}" />
+
+			<h:outputLabel value="Bairro: " />
+			<h:inputText value="#{enderecoBean.enderecoSelecionado.bairro}" />
+
+			<h:outputLabel value="Complemento: " />
+			<h:inputText value="#{enderecoBean.enderecoSelecionado.complemento}" />
+			
+			<h:outputLabel value="Cidade: " />
+			<h:inputText value="#{enderecoBean.enderecoSelecionado.cidade}" />
+			
+			<h:outputLabel value="UF: " />
+			<h:inputText value="#{enderecoBean.enderecoSelecionado.uf}" />
+			
+			<h:outputLabel value="CEP: " />
+			<h:inputText value="#{enderecoBean.enderecoSelecionado.cep}" />
+
+		</h:panelGrid>
+
+		<h:commandButton value="Salvar" action="#{enderecoBean.salvarEndereco}" />
+
+	</h:form>
+
+</h:body>
+</html>
