@@ -23,11 +23,10 @@ public class ConexaoHibernateFilter implements Filter {
 			throws IOException, ServletException {
 		
 		try {
-			
 			this.sf.getCurrentSession().beginTransaction();
 			chain.doFilter(servletFilter, servletResponse);
 			this.sf.getCurrentSession().getTransaction().commit();
-			this.sf.getCurrentSession().close();
+			this.sf.getCurrentSession().close();					
 			
 		} catch (Throwable e) {
 			
