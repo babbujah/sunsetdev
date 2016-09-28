@@ -1,6 +1,6 @@
 body {
 	background-color: #303f9f;
-	margin: 0px 0px 0px 5px !important;
+	margin: 0px !important;
 	font-family: arial;
 }
 /*=====================================Hearde*/
@@ -100,9 +100,4 @@ h1 {
 	border-width: 0px 0px 0px 0px !important;
 	background-color:#303f9f;
 	padding: 0px !important;
-}
-@media screen and (max-width: 770px){
-  	body{
-    background-color: red;
-  }
 }

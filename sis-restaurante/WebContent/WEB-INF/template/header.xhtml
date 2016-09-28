@@ -6,7 +6,13 @@
 	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<h:outputStylesheet library="css" name="modal-menu.css" />
+	<h:outputStylesheet library="css" name="modal-cadastra-funcionario.css" />
+
+
 <!--========================  cabeçalho -->
+
 <p:layoutUnit class="conteudo" position="north" id="header">
 	<div class="ui-grid ui-grid-responsive">
 		<div class="ui-grid-row">
@@ -14,7 +20,7 @@
 			<div class="ui-grid-col-5">
 				<IMG class="logo" alt="Logo Astoria"
 					src="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png" />
-				<h1>Sistema de Loja Astoria</h1>
+				<h1>Sunset Developer</h1>
 
 			</div>
 			<!-- Lado Direito -->
@@ -37,5 +43,20 @@
 		</div>
 	</div>
 </p:layoutUnit>
+	<p:dialog header="Menu Gerencial" widgetVar="dlg2" modal="true">
+		<div class="modal-menu">
+			<ui:include src="/WEB-INF/template/modal-menu.xhtml" />
+		</div>
+	</p:dialog>
+
+
+	<p:dialog header="Cadastro de Funcionário" widgetVar="bt-modal-cadastro-funcionario"
+		modal="true">
+		<div class="modal-cadastro-cliente">
+			<ui:include src="/WEB-INF/template/modal-cadastro-funcionario.xhtml" />
+		</div>
+
+	</p:dialog>
+
 <!--========================Fim Cabeçalho -->
 </html>

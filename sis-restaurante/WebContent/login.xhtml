@@ -8,10 +8,20 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
-	<title>Astoria Sistem 1.1</title>
+	<title>Sunset Developer</title>
 	<h:outputStylesheet library="css/bootstrap" name="bootstrap-theme.min.css" />
 	<h:outputStylesheet library="css/bootstrap" name="bootstrap.min.css" />
+	<h:outputStylesheet library="css/bootstrap" name="bootstrap-theme.css" />
+	<h:outputStylesheet library="css/bootstrap" name="bootstrap.css" />
 	<h:outputStylesheet library="css" name="index.css" />
+	<script type="text/javascript">
+ function Nova()
+ {
+ location.href=" Venda.xhtml"
+ }
+</script>
+
+	
 </h:head>
 <h:body>
 <div class="container">    
@@ -20,7 +30,7 @@
         
         <div class="row">                
             <div class="iconmelon">
-              <img src="http://2.bp.blogspot.com/-rx-myARaqx4/UEI0Rz7DepI/AAAAAAAAAZk/DbUd6FWlWLU/s1600/8397_render_PREMIER.png" alt="" />
+              <img src="http://www.climatedots.org/dots/cold-dot.png" alt="" />
              
             </div>
         </div>
@@ -49,7 +59,9 @@
                     <div class="form-group">
                         <!-- Button -->
                         <div class="col-sm-12 controls">
-                            <button type="submit" href="#" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i> Log in</button>                          
+                            <button type="submit" onclick="javascript:window.open('Venda.xhtml',
+'top=50,left=50,width=800,height=600,menubar=no,scrollbars=yes,Resizable=no,status=no,titlebar=no')" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i> Log in</button>                          
+                        	
                         </div>
                     </div>
 

@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+<!--======================== modal menu -->
+<div class="containe_cadastro">
+	<div class="grupo-btCadastra-Funcionario">
+		<h:commandButton value="Novo" />
+		<h:commandButton value="Alterar" />
+		<h:commandButton value="Excluir" />
+		<h:commandButton class="salvar" value="Salvar" />
+	</div>
+	<h:form>
+		<p:growl id="msgs" showDetail="true" />
+		<p:tabView class="tabview">
+			<p:tab title="Registro">
+				<h:panelGrid columns="2" cellpadding="10">
+				<p:scrollPanel class="scrollCadasto" style="width:auto;height:500px">
+					<h:form>
+						<p:growl id="messages" showDetail="false" />
+						<!-- Content Dados Pessoas -->
+							<fieldset class="content-fomulario">
+								<legend>Dados Pessoal</legend>
+								<dib class="ui-grid"> 
+								
+									<!-- Campo Texto Nome e Email -->
+									<dir class="ui-grid-row">
+										<div class="ui-grid-col-6 content-text">
+											<h:outputLabel for="nome" value="Nome" />
+										</div>
+										<div class="ui-grid-col-6">
+											<h:outputLabel for="email" value="E-mail" />
+										</div>
+									</dir>
+									<!-- Campo Texto Nome e Email --> 
+									
+									<!-- Campo input Nome e Email -->
+									<dir class="ui-grid-row">
+										<div class="ui-grid-col-6">
+											<p:keyboard id="nome" class="todos-input"
+												value="#{keyboardView.value9}" password="false"
+												keypadOnly="false" />
+										</div>
+										<div class="ui-grid-col-6">
+											<p:keyboard id="email" class="todos-input"
+												value="#{keyboardView.value9}" keypadOnly="false" />
+										</div>
+									</dir>
+									<!-- Fim Campo input Nome e Email --> 
+									
+									<!-- Campo Texto Telefone e Data de nascimento -->
+									<dir class="ui-grid-row content-text2">
+										<div class="ui-grid-col-6 ">
+											<h:outputLabel for="telefone" value="Telefone" />
+										</div>
+										<div class="ui-grid-col-6">
+											<h:outputLabel for="nascimento" value="Data de nascimento" />
+										</div>
+									</dir>
+									<!-- Fim Campo Texto Telefone e Data de nascimento--> 
+									
+									<!-- Campo input Telefone e Data de nascimento-->
+									<dir class="ui-grid-row">
+										<div class="ui-grid-col-6">
+											<p:keyboard id="telefone" class="todos-input"
+												value="#{keyboardView.value9}" keypadOnly="false" />
+										</div>
+										<div class="ui-grid-col-6">
+											<p:keyboard id="nascimento" class="todos-input"
+												value="#{keyboardView.value9}" keypadOnly="false" />
+										</div>
+									</dir>
+									<!-- Fim Campo input Telefone e Data de nascimento--> 
+									
+									<!-- Campo Texto Sexo e CPF -->
+									<dir class="ui-grid-row content-text2">
+										<div class="ui-grid-col-5 ">
+											<h:outputLabel for="sexo" value="Sexo" />
+										</div>
+										<div class="ui-grid-col-2">
+											<h:outputLabel for="estado" value="Estado" />
+										</div>
+										<div class="ui-grid-col-5">
+											<h:outputLabel for="cpf" value="CPF" />
+										</div>
+									</dir>
+									<!-- Fim Campo Texto Sexo,estado e CPF -->
+									
+									<!-- Campo input Sexo,estado e CPF -->
+									<dir class="ui-grid-row">
+										<div class="ui-grid-col-5">
+											<p:selectOneRadio id="console" value="#{radioView.console}">
+												<f:selectItem itemLabel="Masculino" itemValue="m" />
+												<f:selectItem itemLabel="Feminino" itemValue="f" />
+											</p:selectOneRadio>
+										</div>
+										<div class="ui-grid-col-2">
+											<p:inputSwitch value="#{selectBooleanView.value1}" />
+										</div>
+										
+										<div class="ui-grid-col-5">
+											<p:keyboard id="cpf" class="todos-input"
+												value="#{keyboardView.value9}" keypadOnly="false" />
+										</div>
+									</dir>
+									<!-- Fim Campo input Sexo,estado e CPF -->
+								</dib>
+							</fieldset>
+						<!-- Fim Content Dados Pessoas -->
+						
+						<!--Content Endereco==================================== -->
+						<fieldset class="content-fomulario">
+							<legend>Endereço</legend>
+							
+							<!-- Campo texto logadouto numero -->
+								<dir class="ui-grid-row content-text2">
+									<div class="ui-grid-col-6 ">
+										<h:outputLabel for="logradouro" value="Logradouro" />
+									</div>
+									<div class="ui-grid-col-2">
+										<h:outputLabel for="numero" value="Número" />
+									</div>
+									<div class="ui-grid-col-4">
+										<h:outputLabel for="bairro" value="Bairro" />
+									</div>
+								</dir>
+							<!-- Fim Campo Texto logadouto numero -->
+							
+							<!-- Campo input logadouto numero -->
+									<dir class="ui-grid-row">
+										<div class="ui-grid-col-6">
+											<p:keyboard id="logradouro" class="todos-input"
+												value="#{keyboardView.value9}" keypadOnly="false" />
+										</div>
+										<div class="ui-grid-col-2">
+											<p:keyboard id="numero" class="numero"
+												value="#{keyboardView.value9}" keypadOnly="false" />
+										</div>
+										<div class="ui-grid-col-4">
+											<p:keyboard id="bairro" class="bairro"
+												value="#{keyboardView.value9}" keypadOnly="false" />
+										</div>
+									</dir>
+							<!-- Fim Campo input logadouto numero -->
+							
+							
+							<!-- Campo texto complemento cidade uf e cep -->
+								<dir class="ui-grid-row content-text2">
+									<div class="ui-grid-col-5">
+										<h:outputLabel for="complemento" value="Complemento" />
+									</div>
+									<div class="ui-grid-col-3">
+										<h:outputLabel for="cidade" value="Cidade" />
+									</div>
+									<div class="ui-grid-col-1">
+										<h:outputLabel for="uf" value="UF" />
+									</div>
+									<div class="ui-grid-col-3">
+										<h:outputLabel for="cep" value="CEP" />
+									</div>
+								</dir>
+							<!-- Fim Campo Texto complemento cidade uf e cep -->
+							
+							<!-- Campo input complemento cidade uf e cep -->
+							<dir class="ui-grid-row">
+								<div class="ui-grid-col-5">
+									<p:keyboard id="complemento" class="todos-input"
+									value="#{keyboardView.value9}" keypadOnly="false" />
+								</div>
+								<div class="ui-grid-col-3">
+									<p:keyboard id="cidade" class="cidade"
+									value="#{keyboardView.value9}" keypadOnly="false"  />
+								</div>
+								<div class="ui-grid-col-1">
+									<p:keyboard id="uf" class="uf"
+									value="#{keyboardView.value9}" keypadOnly="false"  />
+								</div>
+								<div class="ui-grid-col-3">
+									<p:keyboard id="cep" class="cep"
+									value="#{keyboardView.value9}" keypadOnly="false"  />
+								</div>
+							</dir>
+							<!-- Fim Campo input complemento cidade uf e cep -->
+							
+							
+						</fieldset>
+						<!--Fim content Endereco -->
+										
+
+						<!--content login ====================-->
+						<fieldset class="content-fomulario">
+							<legend>Login</legend>
+							<!-- Campo text conteudo de login -->
+								<dir class="ui-grid-row content-text2">
+									<div class="ui-grid-col-6 ">
+										<h:outputLabel for="usuario" value="Usuario" />
+									</div>
+									<div class="ui-grid-col-6">
+										<h:outputLabel for="senha" value="Senha" />
+									</div>
+								</dir>
+							<!-- Fim Campo text conteudo de login -->
+							
+							
+							<!-- Campo input conteudo de login -->
+							<dir class="ui-grid-row">
+								<div class="ui-grid-col-6">
+									<p:keyboard id="usuario" class="todos-input"
+									value="#{keyboardView.value9}" keypadOnly="false" />
+								</div>
+								<div class="ui-grid-col-6">
+									<p:keyboard id="senha" class="todos-input"
+									value="#{keyboardView.value9}" keypadOnly="false" password="true" />
+								</div>
+							</dir>
+							<!-- Fim Campo input conteudo de login -->
+
+						</fieldset>
+						
+					
+					</h:form>
+					</p:scrollPanel>
+				</h:panelGrid>
+			</p:tab>
+
+
+
+			<p:tab title="Pesquisa">
+				<h:panelGrid columns="2" cellpadding="10" class="CadastroFuncionario-pesquisa">
+					<p:dataTable id="singleDT" var="car" value="#{dtSelectionView.cars2}" selectionMode="single" selection="#{dtSelectionView.selectedCar}" rowKey="#{car.id}">
+       					 <f:facet name="header">
+            				<p:outputPanel class="globalfilter">
+               					 <h:outputText value="Pesquisa:" />
+                					<p:keyboard onkeyup="PF('carsTable').filter()" placeholder="Enter keyword" value="#{keyboardView.value9}" keypadOnly="false"/>
+            				</p:outputPanel>
+        				</f:facet>
+       					
+       					<p:column headerText="ID">
+          				  <h:outputText value="#{car.id}" />
+       					</p:column>
+        				<p:column headerText="Nome">
+          				  <h:outputText value="" />
+       					</p:column>
+       					<p:column headerText="Usuario">
+            			  <h:outputText value="" />
+       					</p:column>
+        				<p:column headerText="Estado">
+            			  <h:outputText value="" />
+        				</p:column>
+    				</p:dataTable>				
+				</h:panelGrid>
+			</p:tab>
+		</p:tabView>
+
+	</h:form>
+</div>
+<!--========================Fim modal Cadastro de Funcionario -->
+</html>

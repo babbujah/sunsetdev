@@ -9,35 +9,22 @@
 
 <h:head>
 	<title>Vendas</title>
-	<h:outputStylesheet library="css" name="main.css" />
-	<h:outputStylesheet library="css" name="venda.css" />
-	<h:outputStylesheet library="css" name="modal-menu.css" />
-	<h:outputStylesheet library="css" name="modal-cadastra-cliente.css" />
+	<!-- CSS -->
+		<h:outputStylesheet library="css" name="venda.css" />
+		<h:outputStylesheet library="css" name="main.css" />
+	<!-- Fim CSS -->
 
 </h:head>
 <h:body>
 
-	<p:dialog header="Menu Gerencial" widgetVar="dlg2" modal="true">
-		<div class="modal-menu">
-			<ui:include src="/WEB-INF/template/modal-menu.xhtml" />
-		</div>
-	</p:dialog>
 
-
-	<p:dialog header="Cadastri de Usuário" widgetVar="bt-modal-cadastro"
-		modal="true">
-		<div class="modal-cadastro-cliente">
-			<ui:include src="/WEB-INF/template/modal-cadastro-usuario.xhtml" />
-		</div>
-
-	</p:dialog>
 
 
 	<p:layout fullPage="true">
 		<!--======================== ADD cabeçalho -->
 		<ui:include src="/WEB-INF/template/header.xhtml" />
 		<!--======================== Fim ADD cabeçalho -->
-
+		
 
 		<!-- ==========================  Corpo -->
 		<!-- +++++++++++++Lado Esquerdo -->
@@ -48,7 +35,7 @@
 					header="Grupos de Produtos" resizable="true">
 					Grupos dos Produtos Vendido					
 					<br />
-					Teste VRS:0.0.105
+					Teste VRS:0.0.150
 					</p:layoutUnit>
 				<!-- +++ Bot -->
 				<p:layoutUnit class="produtos" position="center" header="Produtos">asdas</p:layoutUnit>
@@ -81,12 +68,8 @@
 						<p:commandButton class="btVenda" value="-" />
 					</div>
 				</dir>
-
-
-				<h:outputText value="Right unit content." />
-
-
-				<p:dataTable class="Produto" var="produtos"
+		<!-- Fim de Tabela -->
+				<p:dataTable class="produto" var="produtos"
 					value="#{dtBasicView.cars}">
 					<font></font>
 					<p:column headerText="Codigo">
@@ -124,7 +107,33 @@
 					</p:column>
 					<font></font>
 				</p:dataTable>
-				<font></font>
+				<!-- Fim de Tabela -->
+				
+				<!-- Total E botao -->
+				<dir class="ui-grid-row">
+					<div class="ui-grid-col-12">	
+						<h:outputText class="txtvalorTotal" value="Valor Total" />
+					</div>
+				</dir>	
+				<dir class="ui-grid-row">
+					<div class="ui-grid-col-12 valorTotal">	
+						<p:keyboard id="valorTotal" value="R$ 150,00 " keypadOnly="true" disabled="true"/>
+					</div>
+				</dir>
+				<!-- Botao Cancelar e Receber ou finalizar -->
+				<dir class="ui-grid-row btestado">
+					<div class="ui-grid-col-6">
+						<p:commandButton  class="btestado" value="Cancelar" />
+					
+					</div>
+					<div class="ui-grid-col-6">
+						<p:commandButton  class="btestado" value="Receber e Finalizar" />
+					</div>
+				</dir>
+				<!-- Fim Botao Cancelar e Receber ou finalizar -->
+				<!-- Fim Total E botao -->
+				
+				
 			</div>
 		</p:layoutUnit>
 		<!-- +++++++++++++ Fim Esquerdo -->

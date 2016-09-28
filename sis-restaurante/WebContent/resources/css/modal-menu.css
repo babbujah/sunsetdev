@@ -37,7 +37,7 @@
 .nav .ui-widget-header {
 	background-color: transparent !important;
 	border: 0px solid red !important;
-	width width-: auto;
+	width: auto;
 	border-bottom: 3px solid rgba(0, 0, 0, .4) !important;
 }
 

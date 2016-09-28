@@ -10,14 +10,15 @@
 
 <div class="nav-containe_cadastro">
 <h:form>  
+
     <p:growl id="messages" showDetail="false"/>
      <p:menu class="nav">
        <p:submenu class="header-modal-nav" label="Cadastros">
-            <p:menuitem value="Clientes"  update="messages" icon="ui-icon-disk" />
-            <p:menuitem value="Grupos"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
-            <p:menuitem value="Produto"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
-            <p:menuitem value="Usuario"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
-            <p:menuitem value="Mesas"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+            <p:menuitem value="Clientes"  update="messages"  />
+            <p:menuitem value="Grupos"  update="messages" />
+            <p:menuitem value="Produto"  update="messages" />
+            <p:menuitem value="Funcionário" onclick="PF('bt-modal-cadastro-funcionario').show();"  update="messages" />
+            <p:menuitem value="Mesas"  update="messages" />
         </p:submenu>
     </p:menu>
 </h:form>
@@ -27,9 +28,9 @@
     <p:growl id="messages" showDetail="false"/>
 <p:menu class="nav">
         <p:submenu class="header-modal-nav" label="Relatório Geral">
-            <p:menuitem value="Vendas"  update="messages" icon="ui-icon-disk" />
-            <p:menuitem value="Graficos"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
-            <p:menuitem value="Relatorios"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+            <p:menuitem value="Vendas"  update="messages" />
+            <p:menuitem value="Graficos"  update="messages"/>
+            <p:menuitem value="Relatorios"  update="messages" />
         </p:submenu>
     </p:menu>
   </h:form>
@@ -39,10 +40,10 @@
     <p:growl id="messages" showDetail="false"/>
 <p:menu class="nav">
         <p:submenu class="header-modal-nav" label="Configurações">
-            <p:menuitem value="Estabelecimento"  update="messages" icon="ui-icon-disk" />
-            <p:menuitem value="Sistema"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
-            <p:menuitem value="Comanda Eletronica"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>            
-            <p:menuitem value="Volta"  update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+            <p:menuitem value="Estabelecimento"  update="messages"  />
+            <p:menuitem value="Sistema"  update="messages" />
+            <p:menuitem value="Comanda Eletronica"  update="messages" />            
+            <p:menuitem value="Volta"  update="messages" />
         </p:submenu>
     </p:menu>
   </h:form>
