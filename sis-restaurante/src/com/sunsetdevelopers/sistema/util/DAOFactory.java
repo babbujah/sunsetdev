@@ -17,7 +17,7 @@ public class DAOFactory {
 	public static ClienteDAO criaClienteDAO() {
 		ClienteDAOHibernate clienteDAOHibernate = new ClienteDAOHibernate();
 		
-		clienteDAOHibernate.setSessao(sessao);
+		clienteDAOHibernate.setSessao(HibernateUtil.getSession().getCurrentSession());
 
 		return clienteDAOHibernate;
 	}
@@ -25,7 +25,7 @@ public class DAOFactory {
 	public static EnderecoDAO criaEnderecoDAO() {
 		EnderecoDAOHibernate enderecoDAOHibernate = new EnderecoDAOHibernate();
 		
-		enderecoDAOHibernate.setSessao(sessao);
+		enderecoDAOHibernate.setSessao(HibernateUtil.getSession().getCurrentSession());
 		
 		return enderecoDAOHibernate;
 	}
@@ -33,7 +33,7 @@ public class DAOFactory {
 	public static TelefoneDAO criaTelefoneDAO() {
 		TelefoneDAOHibernate telefoneDAOHibernate = new TelefoneDAOHibernate();
 		
-		telefoneDAOHibernate.setSessao(sessao);
+		telefoneDAOHibernate.setSessao(HibernateUtil.getSession().getCurrentSession());
 		
 		return telefoneDAOHibernate;
 	}
